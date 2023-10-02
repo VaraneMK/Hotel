@@ -42,7 +42,7 @@ class ReturnFreeRooms(APIView):
         luxeplus = 0
         luxepremium = 0
         if not validated_data.get("type"):
-            if validated_data["persons"] == 1:
+            if validated_data["persons"] in [1, 2]:
                 stand_obj = Standard.objects.get(pk=1)
                 free_standart_rooms = stand_obj.rooms.filter(~Q(booked__start_date__range=[validated_data["start_date"],
                                                                                            validated_data["end_date"]]),
@@ -56,7 +56,7 @@ class ReturnFreeRooms(APIView):
                 serialized_data = RoomSerializer(many=True, instance=free_standart_rooms).data
                 standard += len(serialized_data + inclusive_date_serializer)
 
-            if validated_data["persons"] in [1, 3, 2]:
+            if validated_data["persons"] in [1, 3, 2, 4]:
                 stand_obj = LuxePremium.objects.get(pk=1)
                 free_luxepremium_rooms = stand_obj.rooms.filter(
                     ~Q(booked__start_date__range=[validated_data["start_date"],
@@ -72,7 +72,7 @@ class ReturnFreeRooms(APIView):
 
                 luxepremium += len(serialized_data + inclusive_date_serializer)
 
-            if validated_data["persons"] in [1, 2]:
+            if validated_data["persons"] in [1, 2, 3]:
                 stand_obj = Luxe.objects.get(pk=1)
                 free_luxepremium_rooms = stand_obj.rooms.filter(
                     ~Q(booked__start_date__range=[validated_data["start_date"],
@@ -99,7 +99,7 @@ class ReturnFreeRooms(APIView):
 
                 luxeplus += len(serialized_data + inclusive_date_serializer)
         else:
-            if validated_data.get("type") == "standard" and validated_data["persons"] == 1:
+            if validated_data.get("type") == "standard" and validated_data["persons"] in [1,2]:
                 stand_obj = Standard.objects.get(pk=1)
                 free_standart_rooms = stand_obj.rooms.filter(~Q(booked__start_date__range=[validated_data["start_date"],
                                                                                            validated_data["end_date"]]),
@@ -111,7 +111,7 @@ class ReturnFreeRooms(APIView):
 
                 serialized_data = RoomSerializer(many=True, instance=free_standart_rooms).data
                 standard += len(serialized_data + inclusive_date_serializer)
-            if validated_data.get("type") == "luxe premium" and validated_data["persons"] in [1, 3, 2]:
+            if validated_data.get("type") == "luxe premium" and validated_data["persons"] in [1, 3, 2, 4]:
                 stand_obj = LuxePremium.objects.get(pk=1)
                 free_luxepremium_rooms = stand_obj.rooms.filter(
                     ~Q(booked__start_date__range=[validated_data["start_date"],
@@ -126,7 +126,7 @@ class ReturnFreeRooms(APIView):
                 serialized_data = RoomSerializer(many=True, instance=free_luxepremium_rooms).data
 
                 luxepremium += len(serialized_data + inclusive_date_serializer)
-            if validated_data.get("type") == "luxe" and validated_data["persons"] in [1, 2]:
+            if validated_data.get("type") == "luxe" and validated_data["persons"] in [1, 2, 3]:
                 stand_obj = Luxe.objects.get(pk=1)
                 free_luxepremium_rooms = stand_obj.rooms.filter(
                     ~Q(booked__start_date__range=[validated_data["start_date"],
@@ -139,7 +139,7 @@ class ReturnFreeRooms(APIView):
                 inclusive_date_serializer = RoomSerializer(many=True, instance=inclusive_date).data
 
                 luxe += len(serialized_data + inclusive_date_serializer)
-            if validated_data.get("type") == "luxe plus":
+            if validated_data.get("type") == "luxe plus" and validated_data["persons"] in [1, 2, 3]:
                 stand_obj = LuxePlus.objects.get(pk=1)
                 free_luxepremium_rooms = stand_obj.rooms.filter(
                     ~Q(booked__start_date__range=[validated_data["start_date"],
