@@ -240,3 +240,9 @@
 		width: 100%;
 	}
 }
+
+@media (max-width: 360px) {
+	.room__persons {
+		width: 12rem;
+	}
+}

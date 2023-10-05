@@ -67,3 +67,9 @@
 		align-items: center;
 	}
 }
+
+@media (max-width: 360px) {
+	.gallery__slider img {
+		width: 15rem;
+	}
+}
