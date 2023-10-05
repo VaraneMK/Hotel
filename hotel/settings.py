@@ -136,6 +136,6 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
     "Access-Control-Allow-Origin"
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://отель-счастье.рф','https://апи.отель-счастье.рф','https://xn--80aqu.xn----8sbnc1aqybdg6c1cg.xn--p1ai']
+CSRF_TRUSTED_ORIGINS = ['https://отель-счастье.рф','https://апи.отель-счастье.рф']
 
 
