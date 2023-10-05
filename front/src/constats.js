@@ -7,7 +7,7 @@ export const ROOMS = 'rooms';
 export const ABOUT = 'about';
 export const SERVICES = 'services';
 export const CONTACTS = 'contacts';
-export const BASE_URL = 'https://отель-счастье.рф:8000';
+export const BASE_URL = 'https://апи.отель-счастье.рф';
 
 export const cyrillicPattern = /^[\u0400-\u04FF]+$/;
 export const telPattern = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
