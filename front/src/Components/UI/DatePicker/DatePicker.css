@@ -181,6 +181,7 @@
 
 	.calendar__day {
 		font-size: 0.935rem;
+		pointer-events: none;
 	}
 	.calendar__week_name {
 		font-size: 0.935rem;
@@ -197,7 +198,7 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: 11px;
-		margin: 0 11px;
+		margin: 0 6px;
 	}
 	.calendar__week_item {
 		font-size: 0.935rem;

@@ -68,22 +68,19 @@
 	}
 	.date__picker {
 		position: absolute;
-		top: -19rem;
+		top: -20rem;
 		left: 0;
 		width: 100%;
 	}
 	.input__text {
 		font-size: 0.9375rem;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 160%; /* 1.5rem */
 	}
 }
 
 @media (max-width: 400px) {
 	.date__picker {
 		position: absolute;
-		top: -19rem;
+		top: -20rem;
 	}
 }
 
