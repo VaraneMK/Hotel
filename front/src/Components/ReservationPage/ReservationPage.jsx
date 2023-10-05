@@ -105,7 +105,7 @@ function ReservationPage() {
 					first_name: nameValue,
 					last_name: lastNameValue,
 					phone_number: telValue,
-					comment: commentsValue,
+					comment: commentsValue !== '' ? commentsValue : ' ',
 					start_date: getDateToString(toDate),
 					end_date: getDateToString(fromDate),
 					amount: persons.child + persons.adults,

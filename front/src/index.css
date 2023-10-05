@@ -328,6 +328,10 @@ input:focus {
 		gap: 0.8rem;
 	}
 
+	.block__text{
+		font-size: 0.9375rem; 
+	}
+
 	.block__page_text {
 		gap: 1rem;
 	}

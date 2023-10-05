@@ -90,6 +90,7 @@
 		border-radius: 0.5rem;
 		background: var(--grey-color, #fff9f8);
 		padding: 1.87rem 1.56rem;
+		gap: 1rem;
 	}
 	.block__title {
 		font-size: 1.5rem;
@@ -102,5 +103,6 @@
 
 	.primary__btn {
 		width: 100%;
+		margin-top: 4rem;
 	}
 }

@@ -37,7 +37,7 @@
 	width: 25px;
 	background: #ffffff;
 	border: 2px solid #875b52;
-	border-radius: 0px;
+	border-radius: 3px;
 }
 .control:hover input ~ .control_indicator,
 .control input:focus ~ .control_indicator {

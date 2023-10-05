@@ -62,6 +62,8 @@
 		display: flex;
 		gap: 0.8rem;
 		font-size: 0.9375rem;
+		align-items: start;
+		align-items: flex-start;
 	}
 	.list__item span {
 		width: 80%;

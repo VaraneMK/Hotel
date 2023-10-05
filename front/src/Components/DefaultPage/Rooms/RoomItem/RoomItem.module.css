@@ -202,8 +202,7 @@
 	}
 
 	.room__item img {
-		width: 20.9375rem;
-		height: 20rem;
+		width: 100%;
 	}
 
 	.info__text {

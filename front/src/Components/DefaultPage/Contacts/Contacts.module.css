@@ -81,5 +81,12 @@
 	.list__item {
 		width: 45%;
 		align-items: center;
+		height: 9.5rem;
+	}
+	.item__title {
+		font-size: 1.25rem;
+	}
+	.item__text {
+		font-size: 0.9375rem;
 	}
 }
