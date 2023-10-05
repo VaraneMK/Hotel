@@ -87,3 +87,17 @@
 		padding: 10rem 0 0.94rem;
 	}
 }
+
+@media (max-width: 460px) and (max-height: 750px) {
+	.preview__block {
+		background-image: url('./../../../Img/preview__mobile.png');
+		padding: 8rem 0 0.94rem;
+	}
+}
+
+@media (max-width: 460px) and (max-height: 690px) {
+	.preview__block {
+		background-image: url('./../../../Img/preview__mobile.png');
+		padding: 6rem 0 0.94rem;
+	}
+}
