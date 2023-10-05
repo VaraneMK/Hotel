@@ -15,7 +15,7 @@ class BookingDate(models.Model):
     first_name = models.CharField(max_length=512, null=True, blank=True)
     last_name = models.CharField(max_length=512, null=True, blank=True)
     phone_number = models.CharField(max_length=32, null=True, blank=True)
-    comment = models.CharField(max_length=512, null=True, blank=True)
+    comment = models.CharField(max_length=512, null=True, blank=False)
     amount = models.IntegerField(default=1)
     nights = models.IntegerField(default=1)
     price = models.IntegerField(default=0)
