@@ -43,6 +43,7 @@
 		flex-direction: column;
 		padding: 4.38rem 1.25rem;
 		align-items: center;
+		gap: 3.12rem;
 	}
 
 	.about img {

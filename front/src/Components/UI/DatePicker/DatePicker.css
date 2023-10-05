@@ -174,4 +174,35 @@
 		gap: 1rem;
 		flex-wrap: wrap;
 	}
+
+	.calendar__header__title {
+		font-size: 0.935rem;
+	}
+
+	.calendar__day {
+		font-size: 0.935rem;
+	}
+	.calendar__week__name {
+		font-size: 0.935rem;
+		width: 2.5rem;
+		text-align: center;
+	}
+
+	.calendar__pick__item {
+		font-size: 0.935rem;
+	}
+
+	.calendar__week__names {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 11px;
+	}
+	.calendar__week_item {
+		font-size: 0.935rem;
+	}
+
+	.calendar__additional__day {
+		padding: 5.5px 0;
+	}
 }

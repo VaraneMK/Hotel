@@ -61,7 +61,7 @@ export const DatePicker: React.FC<CalendarProps> = ({
 					</div>
 				)}
 				{state.mode === 'years' && (
-					<div>
+					<div className="calendar__header__title">
 						{state.selectedYearsInterval[0]} -{' '}
 						{state.selectedYearsInterval[state.selectedYearsInterval.length - 1]}
 					</div>
@@ -88,7 +88,11 @@ export const DatePicker: React.FC<CalendarProps> = ({
 					<>
 						<div className="calendar__week__names">
 							{state.weekDaysNames.map((weekDaysName) => (
-								<div key={weekDaysName.dayShort}>{weekDaysName.dayShort}</div>
+								<div
+									className="calendar__week_name"
+									key={weekDaysName.dayShort}>
+									{weekDaysName.dayShort}
+								</div>
 							))}
 						</div>
 						<div className="calendar__days">
