@@ -182,6 +182,13 @@
 	.calendar__day {
 		font-size: 0.935rem;
 	}
+
+	.calendar__day:hover {
+		color: var(--text-color);
+		border-radius: 10px;
+		background-color: var(--accent-color);
+	}
+
 	.calendar__week_name {
 		font-size: 0.935rem;
 		width: 2.5rem;
@@ -205,5 +212,9 @@
 
 	.calendar__additional__day {
 		padding: 5.5px 0;
+	}
+
+	.calendar {
+		border: 1px solid var(--accent-color, #875b52);
 	}
 }
