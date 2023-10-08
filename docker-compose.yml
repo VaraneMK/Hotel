@@ -9,7 +9,7 @@ services:
       - "8000:8000"
     environment:
       - RUN_MIGRATIONS=1
-    command: python ./hotel/manage.py runserver 0.0.0.0:8000
+    command: bash -c "python ./hotel/manage.py migrate && python ./hotel/manage.py migrate && python ./hotel/manage.py runserver 0.0.0.0:8000"
 
   frontend:
     restart: always
@@ -20,3 +20,24 @@ services:
 
     ports:
         - "3000:3000"
+
+
+  db:
+    image: postgres:latest
+    container_name: db
+    volumes:
+      - pgdbdata:/var/lib/postgresql/prod/data/
+
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+    depends_on:
+      - backend
+
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgdbdata:
