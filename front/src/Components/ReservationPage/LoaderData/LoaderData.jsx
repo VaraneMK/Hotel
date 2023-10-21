@@ -188,15 +188,15 @@ function LoaderData({
 						</div>
 						<div className={styles.reservation__data__block__info}>
 							<span>Количество ночей</span>
-							<span>{`${getNightsCount(toDate, fromDate) + 1} ${normalize_count_form(
-								getNightsCount(toDate, fromDate) + 1,
+							<span>{`${getNightsCount(toDate, fromDate)} ${normalize_count_form(
+								getNightsCount(toDate, fromDate),
 								['ночь', 'ночи', 'ночей'],
 							)}`}</span>
 						</div>
 					</div>
 					<div className={styles.reservation__data__result}>
 						<span>Итого</span>
-						<span>{(getNightsCount(toDate, fromDate) + 1) * selectedRoomData.price} ₽</span>
+						<span>{getNightsCount(toDate, fromDate) * selectedRoomData.price} ₽</span>
 					</div>
 				</div>
 			</div>

@@ -45,7 +45,8 @@ export const normalize_count_form = (number, words_arr) => {
 
 export const getNightsCount = (toDate, fromDate) => {
 	let msDay = 60 * 60 * 24 * 1000;
-	return Math.floor((fromDate - toDate) / msDay);
+
+	return Math.round((fromDate - toDate) / msDay);
 };
 
 export const getDateToString = (date) => {
